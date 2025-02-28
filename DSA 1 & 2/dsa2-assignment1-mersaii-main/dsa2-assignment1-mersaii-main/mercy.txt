@@ -1,0 +1,116 @@
+    # def __check_prereq(self, node, prereq):
+    #     # Implement this
+    #     trav = self.head
+    #     while trav is not None:
+    #         if trav.course_name == prereq:
+    #             return True
+    #         trav = trav.next
+    #     return False
+    
+    # def check_prereqs(self):
+    #     # Implement this
+    #     if self.head is None:
+    #         return True # no courses
+    #     trav = self.head
+    #     while trav is not None:
+    #         for prereq in trav.prereqs:
+    #             if not self.__check_prereq(trav, prereq):
+    #                 return False
+    #         trav = trav.next
+    #     return True
+
+# courses = [
+#     ('CS 132', 2014, ['CS 112', 'CS 131']),
+#     ('CS 131', 2014, ['CS 111']),
+#     ('CS 112', 2013, ['CS 111']),
+#     ('CS 111', 2012, []),
+#     ('CS 105', 2010, [])
+# ]
+
+
+    # def check_prereq(self):
+    #     # seen_courses = set()  # Set to keep track of encountered courses
+        
+    #     if self.head is None:  # Empty transcript
+    #         return True
+        
+    #     trav = self.head
+    #     while trav is not None:
+    #         if not trav.prereqs:  # If there are no prerequisites, continue to the next course
+    #             # seen_courses.add(trav.course_name)
+    #             trav = trav.next
+    #             continue
+            
+    #         for prereq in trav.prereqs:
+    #             if prereq not in seen_courses:  # If a prerequisite is not met, return False
+    #                 return False
+            
+    #         # seen_courses.add(trav.course_name)
+    #         trav = trav.next
+        
+    #     return True  # All prerequisites are satisfied
+
+
+        
+        # if node is None or node.year > year:
+        #     return 0
+        # sum =  self.__num_courses_in_year(node.next, year)
+        # if node.year == year:
+        #     return 1 + sum
+        # else:
+        #     return sum
+
+
+
+courses = [
+            ('CS 132', 2014, ['CS 112', 'CS 131']),
+            ('CS 131', 2014, ['CS 111']),
+            ('CS 112', 2013, ['CS 111']),
+            ('CS 111', 2012, []),
+            ('CS 105', 2010, [])
+        ]
+
+
+        transcript = Transcript()
+for course in courses:
+    # print(course[2])
+    transcript.add(course[0], course[1], course[2])
+
+# print(transcript.to_string())
+
+# ans = transcript.num_courses_in_year(2014)
+# print(ans)
+
+# ans = transcript.check_prereqs()
+# print(ans)
+
+print(transcript.get_transcript())
+
+
+    # def get_transcript(self):
+    #     # Implement this
+    #     trav = self.head
+    #     if trav is None:
+    #         return ''
+        
+    #     s = ''
+    #     last_year = None # to keep track of the last year printed
+    #     stack = []
+    #     while trav is not None: # traverse the transcript and store the courses in a stack
+    #         stack.append(trav)
+    #         trav = trav.next
+    #     for i in range(len(stack)): # print the courses in the stack
+    #         curr = stack.pop()
+    #         if curr.year != last_year:
+    #             s + '\n''\n'
+    #             s + str(curr.year)
+    #             s + '\n'
+    #             last_year = curr.year
+    #         s + curr.course_name 
+    #         s + '\n'
+    #     return s
+
+
+                # if trav.prereqs == []:
+            #     trav = trav.next
+            #     continue
