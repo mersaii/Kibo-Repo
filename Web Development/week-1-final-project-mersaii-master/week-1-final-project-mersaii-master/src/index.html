@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Trivia game</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="all-screens">
+        <div id="welcome-screen">
+            <h1>Welcome to Trivia</h1>
+            <label for="player-name">Enter Your Name:</label>
+            <input type="text" id="player-name" />
+            <button id="start-button">Start</button>
+        </div>
+
+        <div class="card" id="game-screen">
+
+            <p id="greeting-message"></p>
+
+            <div class="ques" id="question-container">
+                <!-- The question will be inserted here dynamically -->
+            </div>
+
+            <div id="answer-buttons-container">
+                <!-- The answer buttons will be inserted here dynamically -->
+            </div>
+
+            <div>
+            
+            <p id="correctCounter"></p>
+            <p id="inCorrectCounter"></p>
+
+            <button id="showAnswerButton">Show Correct Answer</button>
+            </div>
+        </div>
+        
+        <div id="goodbye-screen">
+            <p>Thanks for playing!</p>
+            <!-- <p>Total Correct Answers: <span id="correct-answers"></span></p>
+            <p>Total Incorrect Answers: <span id="incorrect-answers"></span></p> -->
+            <button id="play-again-button">Play Again</button>
+            <!-- <p id="correctCounter">a</p>
+            <p id="inCorrectCounter">b</p> -->
+        </div>
+
+    </div>
+<script src="./trivia.js"></script>
+</body>
+</html>

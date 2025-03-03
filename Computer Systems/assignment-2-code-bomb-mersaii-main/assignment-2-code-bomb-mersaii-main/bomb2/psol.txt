@@ -1,0 +1,6 @@
+For NASA, space is still a high priority.
+1 2 4 8 16 32
+5 v 71
+2 4
+5 115
+6 3 5 2 4 1

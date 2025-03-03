@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- <div id="welcome">Hello World</div> -->
+    <div class="container">
+      <h1>Caesar Cipher</h1>
+
+      <!-- section for decryption -->
+      <div class="encryption-section">
+          <label for="encryptedMessage">Enter Message:</label>
+          <input type="text" id="encryptedMessage" placeholder="Enter your message">
+
+          <label for="encryptedOffset">Enter Offset:</label>
+          <input type="number" id="encryptedOffset" placeholder="Enter offset">
+
+          <button id="encryptButton">Encrypt</button>
+          <!-- <button onclick="encryptMessage()">Encrypt</button> -->
+
+          <div class="result">
+              <label>Encrypted Message:</label>
+              <div id="encryptedMessageResult"></div>
+          </div>
+      </div>
+
+      <!-- section for decryption -->
+      <div class="decryption-section">
+        <label for="decryptedMessage">Enter Message to Decrypt:</label>
+        <input type="text" id="decryptedMessage" placeholder="Enter the message to decrypt">
+
+        <label for="decryptedOffset">Enter Offset for Decryption:</label>
+        <input type="number" id="decryptedOffset" placeholder="Enter decryption offset">
+
+        <button id="decryptButton">Decrypt</button>
+
+        <div class="result">
+            <label>Decrypted Message:</label>
+            <div id="decryptedMessageResult"></div>
+        </div>
+      </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

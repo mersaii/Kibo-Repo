@@ -1,0 +1,335 @@
+// export function filterData(data, countryInput, dateInput) {
+//     console.log(countryInput, dateInput);
+
+//     if (countryInput && !dateInput) {
+//         console.log('country input only')
+//         const matchingEntry = data.filter(entry => {
+//             const countryMatch = countryInput ? entry.country.toLowerCase().includes(countryInput) : true;
+//             // const dateMatch = dateInput ? entry.statistics.some(stat => stat.time === dateInput) : true;
+
+//             console.log(countryMatch);
+//             return countryMatch;
+//         });
+
+//         if (matchingEntry) {
+//             console.log('entry', matchingEntry);
+//             return [matchingEntry];
+//         } 
+//         else {
+//             console.log('no country entry found in data');
+//             return null; 
+//         }
+//     }
+
+//     else if (!countryInput && dateInput) {
+//         console.log('date input only')
+//         const matchingEntries = data.filter(entry => {
+//             const dateMatch = entry.statistics.includes(stat => stat.time === dateInput);
+
+//             console.log(dateMatch);
+//             return dateMatch;
+//         });
+
+//         if (matchingEntries.length > 0) {
+//             console.log('entries', matchingEntries);
+//             return [matchingEntries];
+//         }
+//         else {
+//             console.log('no entries found in data');
+//             return null; 
+//         }
+//     }
+
+// }
+
+// // export function filterData(data, countryInput, dateInput) {
+//     //     console.log(countryInput, dateInput);
+    
+//     //     const matchingCountry = data.find(entry => {
+//     //         const countryMatch = entry.country.toLowerCase().includes(countryInput);
+//     //         console.log(countryMatch);
+//     //         return countryMatch;
+//     //     });
+    
+//     //     if (matchingCountry) {
+//     //         const matchingStat = matchingCountry.statistics.find(stat => {
+//     //             const dateMatch = dateInput ? stat.time === dateInput : true;
+//     //             console.log(dateMatch);
+//     //             return dateMatch;
+//     //         });
+    
+//     //         if (matchingStat) {
+//     //             console.log('entry', { matchingCountry, matchingStat });
+//     //             return { matchingCountry, matchingStat };
+//     //         } else {
+//     //             console.log('no matching date found');
+//     //             return null;
+//     //         }
+//     //     } else {
+//     //         console.log('no matching country found');
+//     //         return null;
+//     //     }
+//     // }
+    
+
+
+
+
+// // const countryInput = document.getElementById('countryInput').value.toLowerCase();
+//         // const dateInput = document.getElementById('dateInput').value;
+//         // console.log(countryInput,dateInput)
+//         // let numbers = [1, 2, 3, 4, 5];
+//         // let evens = numbers.filter(num => num % 2 === 0);
+//         // console.log(evens);
+
+//         // data.filter(entry => {
+//         //     const countryMatch = entry.country.toLowerCase().includes(countryInput);
+//         //     const dateMatch = entry.statistics.some(stat => stat.time === dateInput);
+    
+//         // }
+
+
+//     // Milestone 2: Implement Country Filter
+//     // Add an input field to allow users to type the name of a country. Make sure to handle cases where users type in lowercase, uppercase, or a combination of both.
+//     // Display data for the selected country when a valid name is entered.
+
+// // export function filterData(data, country){
+// //     // filter data by country
+// //     let filteredData = data.filter(entry => entry.country.toLowerCase().includes(country.toLowerCase()))
+// //     // console.log(filteredData)
+// //     return filteredData
+// // }
+
+
+// // export function filterData(data, countryInput,dateInput) {
+// //         console.log(countryInput, dateInput);
+
+// //         data.filter(entry => {
+// //             const countryMatch = countryInput ? entry.country.toLowerCase().includes(countryInput) : true;
+
+// //             const dateMatch = dateInput ? entry.statistics.some(stat => stat.time === dateInput) : true;
+    
+// //             console.log(countryMatch,dateMatch);
+// //             // return countryMatch && dateMatch;
+// //         })
+// //         if (countryMatch && dateMatch) {
+// //             console.log('entry', entry)
+// //             return entry
+// //         }else{
+// //             console.log('no entry')
+// //         }
+        
+// //         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // import './style.css'
+// // import covidData from './covid-data'
+// // import processData from './process-data.js'
+
+// // // document.querySelector('#app').addEventListener('click', ()=>{
+// // //   alert('hello world')
+// // // })
+
+// // // processData(covidData)
+
+// // const data = covidData;
+
+// // const statsBody = document.getElementById('statsBody');
+// // statsBody.innerHTML = '';
+
+// // data.forEach(entry => {
+// //   const lastStat = entry.statistics[entry.statistics.length - 1];
+// //   const row = document.createElement('tr');
+// //   row.innerHTML = `<td>${entry.country}</td>
+// //                   <td>${lastStat.cases}</td>
+// //                   <td>${lastStat.deaths}</td>
+// //                   <td>${lastStat.recoveries}</td>
+// //                   <td>${lastStat.time}</td>`;
+// //   statsBody.appendChild(row);
+// // });
+
+// // function renderTable(data){
+// //   const statsBody = document.getElementById('statsBody');
+// //   statsBody.innerHTML = '';
+
+// //   data.forEach(entry => {
+// //   const lastStat = entry.statistics[entry.statistics.length - 1];
+// //   const row = document.createElement('tr');
+// //   row.innerHTML = `<td>${entry.country}</td>
+// //                   <td>${lastStat.cases}</td>
+// //                   <td>${lastStat.deaths}</td>
+// //                   <td>${lastStat.recoveries}</td>
+// //                   <td>${lastStat.time}</td>`;
+// //   statsBody.appendChild(row);
+// //   });
+// // }
+
+// // let apply_filterbtn = document.getElementById('applyFilterBtn')
+// // const processDataIns = processData(covidData);
+
+// // apply_filterbtn.addEventListener('click', function() {
+// //   // Assuming you have access to the necessary DOM elements
+// //   const countryInputValue = document.getElementById('countryInput').value.toLowerCase();
+// //   const dateInputValue = document.getElementById('dateInput').value;
+
+// //   // const filterData = processData(covidData);
+
+// //   // Call filterData with the input values
+// //   let a = processDataIns.filterData(countryInputValue, dateInputValue);
+// //   renderTable(a)
+// // });
+
+
+
+
+
+// // // Use the filteredData as needed
+// // // console.log(filteredData);
+
+
+
+// // process-data.js
+
+
+//     // let filteredData = [...data];
+   
+//     // function filterData(countryInput,dateInput) {
+//     //     console.log(countryInput, dateInput);
+
+//     //     // const countryInput = document.getElementById('countryInput').value.toLowerCase();
+//     //     // const dateInput = document.getElementById('dateInput').value;
+//     //     // console.log(countryInput,dateInput)
+        
+//     //     filteredData = data.filter(entry => {
+//     //         const countryMatch = countryInput ? entry.country.toLowerCase().includes(countryInput) : true;
+//     //         const dateMatch = dateInput ? entry.statistics.some(stat => stat.time === dateInput) : true;
+    
+//     //         console.log(countryMatch,dateMatch);
+//     //         return countryMatch && dateMatch;
+//     //     });
+
+//     //     console.log(filteredData);
+
+//     //     return filteredData;
+//     //     }
+
+
+
+
+
+//         // filteredData = data.filter(entry => {
+//         //     const countryMatch = entry.country.toLowerCase().includes(countryInput);
+//         //     const dateMatch = dateInput ? entry.statistics.some(stat => stat.time === dateInput) : true;
+    
+//         //     return countryMatch && dateMatch;
+//         // });
+    
+//         // renderTable();
+//         // }
+
+//     // sortTable: (column)=> {
+//     //     filteredData.sort((a, b) => {
+//     //         if (column === 0) return a.country.localeCompare(b.country);
+//     //         return b.statistics[b.statistics.length - 1][Object.keys({ 'Cases': 1, 'Deaths': 2, 'Recoveries': 3 })[column - 1]] - 
+//     //                 a.statistics[a.statistics.length - 1][Object.keys({ 'Cases': 1, 'Deaths': 2, 'Recoveries': 3 })[column - 1]];
+//     //     });
+    
+//     //     renderTable();
+//     //     }
+      
+// //     renderTable: (data) => {
+// //         const statsBody = document.getElementById('statsBody');
+// //         statsBody.innerHTML = '';
+
+// //         data.forEach(entry => {
+// //         const lastStat = entry.statistics[entry.statistics.length - 1];
+// //         const row = document.createElement('tr');
+// //         row.innerHTML = `<td>${entry.country}</td>
+// //                         <td>${lastStat.cases}</td>
+// //                         <td>${lastStat.deaths}</td>
+// //                         <td>${lastStat.recoveries}</td>
+// //                         <td>${lastStat.time}</td>`;
+// //         statsBody.appendChild(row);
+// //         });
+    
+// //     }
+    
+// // }
+
+//     // Initial rendering
+//     // filterData();
+
+//     // renderTable: () => {
+//     //     const table = document.getElementById('table');
+//     //     table.innerHTML = '';
+    
+//     //     filteredData.forEach(entry => {
+//     //         const row = document.createElement('tr');
+    
+//     //         const countryCell = document.createElement('td');
+//     //         countryCell.textContent = entry.country;
+//     //         row.appendChild(countryCell);
+    
+//     //         const dateCell = document.createElement('td');
+//     //         dateCell.textContent = entry.statistics[0].time;
+//     //         row.appendChild(dateCell);
+    
+//     //         const casesCell = document.createElement('td');
+//     //         casesCell.textContent = entry.statistics[0].confirmed;
+//     //         row.appendChild(casesCell);
+    
+//     //         const deathsCell = document.createElement('td');
+//     //         deathsCell.textContent = entry.statistics[0].deaths;
+//     //         row.appendChild(deathsCell);
+    
+//     //         table.appendChild(row);
+//     //     });
+//     // }
+
+//     // renderTable();
+
+
+// // Milestone 1: Display Total Statistics
+// // Display stats on your dashboard for 20 provided countries.
+// // Milestone 2: Implement Country Filter
+// // Add an input field to allow users to type the name of a country. Make sure to handle cases where users type in lowercase, uppercase, or a combination of both.
+// // Display data for the selected country when a valid name is entered.
+// // Milestone 3: Implement Date Filter
+// // Add buttons or a dropdown menu to allow users to select a month or a year.
+// // Display data for the selected period when a valid date is chosen.
+// // Milestone 4: Implement Sorting
+// // Add clickable table headers that allow users to sort countries based on the number of cases, deaths, or recoveries.
+
+// // milestone 1
+
+// // Milestone 2: Implement Country Filter
+// // Add an input field to allow users to type the name of a country. Make sure to handle cases where users type in lowercase, uppercase, or a combination of both.
+
+// // Display data for the selected country when a valid name is entered.

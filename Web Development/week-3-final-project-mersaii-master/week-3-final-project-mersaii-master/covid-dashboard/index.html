@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- Add your HTML code here -->
+    <div id="app">
+      <h1>COVID-19 Stats</h1>
+<p id="loader" class="loader"></p>
+      <form id="filterForm">
+        <label for="countryInput">Country:</label>
+        <input type="text" id="countryInput" placeholder="Type country name">
+        <!-- <p id="filterError"></p> -->
+        <label for="dateInput" >Date:</label>
+        <input type="month" id="dateInput" min="2021-07" max="2022-06">
+    
+        <button type="button" id="applyFilterBtn">Apply Filters</button>
+      </form>
+    
+      <label for="countryDropdown">Select a Category:</label>
+      <select id="categoryDropdown">
+          <option value="country" id="countrySort">Country</option>
+          <option value="deaths" id="deathsSort">Deaths</option>
+          <option value="recoveries" id="recoveredSort">Recoveries</option>
+          <option value="cases" id="casesSort">Cases</option>
+          <option value="date" id="dateSort">Date</option>
+      </select>
+
+      <label for="orderDropdown">Select Order:</label>
+      <select id="orderDropdown">
+          <option value="asc" id="asc">Ascending</option>
+          <option value="desc" id="desc">Descending</option>
+      </select>
+      <button type="button" id="applySortBtn">Sort</button>
+
+
+
+
+
+      <table id="statsTable">
+        <thead id="headerSort">
+          <tr>
+            <th class="country">Country</th>
+            <th class="cases">Cases</th>
+            <th class="deaths">Deaths</th>
+            <th class="recoveries">Recoveries</th>
+            <th class="date">Date</th>
+          </tr>
+        </thead>
+        <tbody id="statsBody">
+          <!-- Data will be populated here -->
+        </tbody>
+      </table>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
