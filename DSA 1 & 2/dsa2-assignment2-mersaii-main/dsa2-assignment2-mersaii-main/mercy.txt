@@ -1,0 +1,15 @@
+        # Find the next available space in the table
+        # while num_checked < len(ht) and ht[i] != self.EMPTY and (ht[i] == self.REMOVED or ht[i][0] != username):
+        #     # Linear probing
+        #     i = (i + 1) % len(ht)
+        #     num_checked += 1
+
+
+
+                ht = self.table
+        i = self.hash_func(new_account[0])
+        for each in ht:
+            if each[0] == new_account[0]:
+                self.delete_user(new_account[0])
+
+        return self.register_user(new_account[0], new_account[1])
